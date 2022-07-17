@@ -1,14 +1,23 @@
 class Item:
     def __init__(self, name, AD, Def, HP, Equipped, LvL, type, rarity):
+        #Name of the item
         self.name = name
+        #Various stats
         self.AD = AD
         self.Def = Def
         self.HP = HP
+        #Boolean value tracking whether or not the item is in use
         self.Equipped = Equipped
+        #The required level to use the item
         self.Lvl = LvL
+        #The type of the item: weapon (AD), helmet, gauntlets, chestpiece, boots (all Def and a little HP), and banner (HP and a little Def)
+        #Only one of each type may be equipped at a time. 
         self.type = type
+        # Rarity. Higher rarity items drop less frequently, but have better stats. In addition,
+        # higher rarity items will give more types of stats (To be implemented in a later version) 
         self.rarity = rarity
     
+    #equip/unequip an item
     def Equip(self):
         self.Equipped = 1
     
