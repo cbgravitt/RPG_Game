@@ -10,3 +10,6 @@ This RPG is made in Python, but it is an object-oriented program. This file is f
 
 # RPG_Main
 This will have the main gameplay loop, including a save feature.
+
+# RPG_Items
+Holds all items currently in the game. Some comments describing future features are also in this file.
