@@ -98,7 +98,7 @@ class Enemy:
     #is greater than lootable[0][0] (the odds of the first item), then the odds of that item
     #are subtracted from that number and we move on to loottable[1][0] until the random number
     #is reduced to less than the odds of something. Then, that item is given. 
-    #As an ex, if the three values are [.8, nothing], [.1, bronze sword], [.1, bronze helmet],
+    #As an example, if the three values are [.8, nothing], [.1, bronze sword], [.1, bronze helmet],
     #rolling below .8 gives nothing. rolling a .8-.899999... gives sword, .9-1 gives helmet.
     def addLoot(self, item: Item, odds):
         self.lootTable.append([odds, item])
@@ -119,13 +119,14 @@ def makeSurge(lvl):
     surge.addLoot(loot.bronze_helmet, .01)
     surge.addLoot(loot.bronze_chest, .01)
     surge.addLoot(loot.bronzed_banner, .01)
+    return surge
 
-
-
-
-            
-    
-
-    
-
-    
+#The Null are what make the Ashen a dominant invasion force. Whenever the Ashen arrive in an area, they are preceded by
+#a magically-induced cloud of ash. One purpose of this is to intimidate, another is to hide their movements, but the most 
+#important is to deploy the Null. Shapeless and ruthless, the Null are a shadowy race who are literally one with the ash,
+#sinking into it and disappearing completely, only to pop out again in a nearby soot pile. They are master assassins who are 
+#impossible to follow, since their unique ability means they can teleport up to 10 miles between ash clouds. When an ash cloud
+#rolls in, the Null are counted on to quickly eliminate unaware targets, no matter how dangerous.
+def makeNull(lvl):
+    null = Enemy("Null", 300 + rn.randint(-50, 80), 700, 900 + rn.randint(-30, 60), lvl, 2000)
+    return     
