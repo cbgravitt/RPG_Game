@@ -108,7 +108,7 @@ class Enemy:
 
 #The Surge are the grunts of the Ashen. They are reanimated corpses filled with carefully enchanted
 #electrical magic that pilots the body automatically. Easy to make and unfailingly loyal, they are the footsoldiers
-#of the Ashen King. Their name comes from the fact that, when they die, they occasionally release a small surge of electricity,
+#of the army. Their name comes from the fact that, when they die, they occasionally release a small surge of electricity,
 #disorienting nearby Surge and shocking anyone touching them slightly. Clearly, the spell is not perfect...
 def makeSurge(lvl):
     surge = Enemy("Surge", 7, 10, 48 + rn.randint(-3, 2), lvl, 20)
@@ -129,4 +129,18 @@ def makeSurge(lvl):
 #rolls in, the Null are counted on to quickly eliminate unaware targets, no matter how dangerous.
 def makeNull(lvl):
     null = Enemy("Null", 300 + rn.randint(-50, 80), 700, 900 + rn.randint(-30, 60), lvl, 2000)
-    return     
+    return null
+
+#The Voltaic are the most powerful enemy the hero will face (for now). The electro-necromancers of the Ashen, they are an essential
+# tool of the army without which nothing would be possible. Capable of conjuring all sorts of magic, from the electricity that revives 
+# the surge to the great ash storms that give the army its name, their power is rivaled only by their cunning. It is rumored that a 
+# council of especially ancient, powerful, and wise Voltaic are the ones responsible for planning the movements and strategies
+#  of the Ashen. Of course, this is just a rumor...
+# (small sidenote: this rumor is false! The Ashen have no real centralized leadership, but are rather directed by coalition of powerful generals
+# who occasionally meet but mainly send Null messengers back and forth to coordinate. Some of these generals are similar to Voltaic
+# insofar as they possess many of the same magical abilities, but many are more unique members of the Ashen who will be introduced in 
+# later versions ;)
+#(also side note if you see contradictory lore anywhere let me know, I'm writing this very piecemeal and may forget where I started
+# by the time I finish!)
+def makeVoltaic(lvl):
+    return
